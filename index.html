@@ -14,10 +14,18 @@
       rel="stylesheet"
     />
     <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+    <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
       crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
     />
     <link rel="stylesheet" href="./assets/css/main.css" />
     <link
@@ -27,12 +35,304 @@
     />
   </head>
   <body>
-   <div class="wrapper">
-  <header class="header">Header</header>
-  <main class="main">Content</main>
-  <footer class="footer">Footer</footer>
-   </div>
+    <div class="wrapper">
+      <header class="header">
+        <div class="header-top py-1">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-6 col-sm-4">
+                <div class="header-top-phone d-flex align-items-center h-100">
+                  <i class="fa-solid fa-mobile-screen"></i>
+                  <a href="tel:+1234567890" class="ms-2">123 456 7890</a>
+                </div>
+              </div>
+              <!--header-top-phone-->
 
+              <div class="col-sm-4 d-none d-sm-block">
+                <ul class="social-icons d-flex justify-content-center">
+                  <li>
+                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                  </li>
+                </ul>
+              </div>
+              <!--social-icons-->
+
+              <div class="col-6 col-sm-4">
+                <div class="header-accounts d-flex justify-content-end">
+                  <div class="btn-group me-2">
+                    <div class="dropdown">
+                      <button
+                        class="btn btn-sm dropdown-toggle"
+                        type="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                      >
+                        Account
+                      </button>
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Sign In</a></li>
+                        <li>
+                          <a class="dropdown-item" href="#">Sign Up</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="btn-group">
+                    <div class="dropdown">
+                      <button
+                        class="btn btn-sm dropdown-toggle"
+                        type="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                      >
+                        EN
+                      </button>
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">RU</a></li>
+                        <li>
+                          <a class="dropdown-item" href="#">DE</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--header-accounts-->
+            </div>
+          </div>
+        </div>
+
+        <div class="header-middle bg-white py-2">
+          <div class="container-fluid">
+            <div class="row align-items-center">
+              <div class="col-6 col-md-4">
+                <a href="index.html" class="header-logo h1">E-Shop</a>
+              </div>
+
+              <div class="col-6 col-md-4 order-md-2 cart-buttons text-end">
+                <a href="#" class="btn p-1">
+                  <i class="fa-solid fa-heart"></i>
+                  <span
+                    class="badge text-bg-warning cart-badge bg-warning rounded-circle"
+                    >3</span
+                  >
+                </a>
+
+                <button
+                  class="btn p-1"
+                  type="button"
+                  data-bs-toggle="offcanvas"
+                  data-bs-target="#offcanvasCart"
+                  aria-controls="offcanvasCart"
+                >
+                  <i class="fa-solid fa-cart-shopping"></i>
+                  <span
+                    class="badge text-bg-warning cart-badge bg-warning rounded-circle"
+                    >5</span
+                  >
+                </button>
+                <div
+                  class="offcanvas offcanvas-end"
+                  tabindex="-1"
+                  id="offcanvasCart"
+                  aria-labelledby="offcanvasCartLabel"
+                >
+                  <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasCartLabel">
+                      Offcanvas
+                    </h5>
+                    <button
+                      type="button"
+                      class="btn-close"
+                      data-bs-dismiss="offcanvas"
+                      aria-label="Close"
+                    ></button>
+                  </div>
+                  <div class="offcanvas-body">
+                    <div>
+                      Some text as placeholder. In real life you can have the
+                      elements you have chosen. Like, text, images, lists, etc.
+                    </div>
+                    <div class="dropdown mt-3">
+                      <button
+                        class="btn btn-secondary dropdown-toggle"
+                        type="button"
+                        data-bs-toggle="dropdown"
+                      >
+                        Dropdown button
+                      </button>
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li>
+                          <a class="dropdown-item" href="#">Another action</a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="#"
+                            >Something else here</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4 order-md-1 mt-2 mt-md-0">
+                <form action="">
+                  <div class="input-group">
+                    <input
+                      type="text"
+                      class="form-control"
+                      name="s"
+                      placeholder="Searching..."
+                      aria-label="Searching..."
+                      aria-describedby="button-search"
+                    />
+                    <button
+                      class="btn btn-outline-warning"
+                      type="submit"
+                      id="button-search"
+                    >
+                      <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--header-middle-->
+       
+      </header>
+       <div class="header-bottom sticky-top">
+          <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+            <div class="container-fluid">
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasNavbar"
+                aria-controls="offcanvasNavbar"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div
+                class="offcanvas offcanvas-start"
+                id="offcanvasNavbar"
+                tabindex="-1" aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Catalog</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanas"
+                    aria-label="Close">
+                    </button>
+                   </div>
+                   <div class="offcanvas-body">
+                    <ul class="navbar-nav">
+                     <li class="nav-item">
+                   <a
+                    class="nav-link active"
+                    aria-current="page"
+                    href="index.html"
+                    >Home</a
+                   >
+                     </li>
+                     <li class="nav-item">
+                  <a class="nav-link" href="#">About</a>
+                     </li>
+                     <li class="nav-item">
+                  <a class="nav-link" href="#">Contact</a>
+                     </li>
+                     <li class="nav-item">
+                  <a class="nav-link" href="#">Payment</a>
+                     </li>
+                     <li class="nav-item">
+                  <a class="nav-link" href="#">Delivery</a>
+                     </li>
+                     <li class="nav-item-dropdown">
+                  <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                  data-bs-auto-close="outside">
+                  Catalog
+                  </a>
+                    <ul class="dropdown-menu dropdown-menu-end" data-bs-popper="static">
+                 <li>
+                  <a class="dropdown-item" href="#">Shoes</a>
+                </li>
+                 <li>
+                  <a class="dropdown-item" href="#">Jeans</a>
+                </li>
+                <li class="nav-item-dropend">
+                  <a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown"
+                  data-bs-auto-close="outside">Sportswear</a>
+                  <ul class="dropdown-menu dropdown-menu-end">
+                    <li>
+                      <a class="dropdown-item" href="#">Men's Sportswear</a>
+                    </li>
+                       <li>
+                      <a class="dropdown-item" href="#">Women's Sportswear</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">Baby's Sportswear</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Coat</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Shirts</a>
+                </li>
+                    </ul>
+                     </li>
+                    </ul>
+                </div>
+              </div>
+            </div>
+          </nav>
+        </div>
+        <!--header-bottom-->
+      <main class="main">
+        <div class="container-fluid">
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis facilis, maiores, nulla nisi laborum reiciendis maxime rem pariatur asperiores numquam cupiditate ipsum nam laudantium? Ipsam ducimus aliquam optio qui quos.</p>
+          <p>Debitis qui magni voluptate dolores consequatur tempore hic doloremque suscipit cumque non quam nemo nisi iste reprehenderit nam ducimus error nihil odit, temporibus architecto. Asperiores totam quod eius non ipsam.</p>
+          <p>Nobis, animi commodi voluptates repellat vero laborum adipisci necessitatibus, labore atque repellendus iusto libero. Laboriosam officia repellendus autem veritatis similique debitis consequatur molestiae animi praesentium nam id, voluptatibus dicta vel.</p>
+          <p>Ex, quaerat, illum amet nisi a consectetur, error placeat nobis eveniet at exercitationem et ducimus fuga. Dolor, similique labore sapiente doloribus nulla ea deleniti adipisci error laborum. In, quod recusandae.</p>
+          <p>Non nihil quaerat quibusdam culpa doloribus cum, est consequuntur ad magnam accusantium, eum voluptate alias delectus facilis corporis consequatur laboriosam quis veniam optio quisquam iure mollitia! Impedit quidem in aspernatur!</p>
+          <p>Sed sint, nihil debitis sit iure similique totam omnis quaerat esse. Quaerat, officiis nulla? Consequuntur, voluptatum suscipit molestiae expedita exercitationem id veniam amet accusamus placeat nam, autem et velit minima.</p>
+          <p>Commodi, ipsa tempore quasi incidunt veritatis vitae, necessitatibus accusamus sapiente odio enim voluptatibus nemo ad nostrum quod. Repudiandae tenetur rerum laborum assumenda ducimus voluptas voluptatum! Itaque dolorem sunt voluptates quae?</p>
+          <p>Laborum est eius porro obcaecati nobis saepe sapiente, fugit laboriosam libero maiores dolor veritatis debitis consectetur repudiandae ducimus quod earum possimus reiciendis, eligendi at! Nobis inventore facilis minus aliquam quas.</p>
+          <p>Corporis, maxime. Explicabo itaque deleniti numquam quia ea, delectus ipsum quidem sequi odio placeat quas enim omnis obcaecati magni fuga nemo. Dignissimos sit quae ex mollitia modi ullam ab eaque?</p>
+          <p>Sequi, hic a. Earum vitae commodi cupiditate libero odit, id eaque. Magni quia nisi nostrum, magnam porro reiciendis, eius similique doloribus cumque velit aperiam beatae iusto voluptate et eum ipsum!</p>
+          <p>Dolorem placeat nihil ipsum? Nobis culpa repudiandae perferendis fugiat harum tempore eligendi temporibus fuga placeat tenetur, vitae sit eveniet mollitia atque ex sint possimus deserunt alias nemo? Temporibus, non consectetur.</p>
+          <p>Optio perferendis doloribus, earum deleniti cupiditate aperiam vitae amet magni neque explicabo sunt deserunt quod eligendi harum nostrum facilis illo? Temporibus distinctio enim perferendis placeat accusamus sequi facere quibusdam ipsa?</p>
+          <p>Similique quam odit magnam velit eos nemo quis doloremque quia ut, quaerat fuga harum corporis, consectetur quibusdam aspernatur! Molestiae, nisi fugiat tempora velit quasi nemo. Aliquid quas veniam obcaecati ipsum.</p>
+          <p>Vitae tempora sint expedita temporibus natus molestiae perspiciatis voluptatum nulla officiis harum mollitia sapiente, corporis saepe est, impedit consequuntur illo hic porro facere reiciendis non eaque fugiat excepturi dolor. Fugit!</p>
+          <p>Quam nisi corrupti a quisquam magnam nulla impedit, perferendis adipisci consectetur dolore cumque veniam labore reiciendis eum, aut nesciunt nihil molestias quia id in ipsam placeat quas commodi blanditiis. Asperiores?</p>
+          <p>Nostrum deserunt, modi voluptatem consectetur molestias odio ad quo suscipit laboriosam, voluptates rem sapiente libero delectus voluptas tenetur fugiat maiores quas at officia expedita iusto eius iure ducimus. Fuga, nobis.</p>
+          <p>Porro, aliquam fugiat voluptate ipsam labore quisquam animi sequi dolorem ipsa ex eligendi accusantium quam asperiores possimus, velit optio eaque nam debitis nobis obcaecati veritatis praesentium, iusto repellat. Eligendi, ad.</p>
+          <p>Dolorem animi corporis soluta. Dignissimos voluptas doloremque quos natus placeat eos quam eligendi omnis suscipit ullam? Velit ut, cumque est maxime quae et laborum excepturi beatae dolore ducimus repellendus tempora.</p>
+          <p>Saepe, at. Eveniet eligendi aliquid consequuntur, corporis quibusdam facilis. Fuga qui similique aut quae obcaecati. Cumque rerum nisi delectus mollitia vitae necessitatibus laudantium et iusto rem. Vel laborum possimus pariatur!</p>
+          <p>Molestiae debitis provident a sit pariatur recusandae, minima magnam qui exercitationem illo, laborum facilis iste soluta quas dignissimos similique, voluptates eaque. Praesentium nostrum quasi ratione quo minus, aspernatur eos perferendis.</p>
+        </div>
+      </main>
+      <footer class="footer">Footer</footer>
+    </div>
+
+    <script
+      src="https://kit.fontawesome.com/fc109bf61d.js"
+      crossorigin="anonymous"
+    ></script>
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
       integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
